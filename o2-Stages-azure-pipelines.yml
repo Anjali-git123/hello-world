@@ -12,9 +12,7 @@ pool:
 
 stages:
 - stage:  Build
-
-- stage:  Devdeploy
-jobs:
+  jobs:
   - job: Firstjob
     steps:
     - script: echo Hello, world ANJALI--job1!
@@ -35,14 +33,14 @@ jobs:
     - script: echo Hello, world ANJALI--job3!
       displayName: 'Run a one-line script'
 
-- stage:  QADeploy
-jobs:
+- stage:  Deploy
+  jobs:
   - job: Firstjob
     steps:
     - script: echo Hello, world ANJALI--QADeploy!
       displayName: 'Run a one-line script'
 - stage:  ProdDeploy
-jobs:
+  jobs:
   - job: Firstjob
     steps:
     - script: echo Hello, world ANJALI--ProdDeploy!
